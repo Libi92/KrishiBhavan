@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="SiteMaster" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .auto-style1 {
+            margin-right: 0px;
+        }
+    </style>
+    
+</head>
+<body style="width:100%; height: 436px;">
+
+    
+
+    <form runat="server" class="auto-style1">
+        <asp:ScriptManager ID="_scriptManager" runat="server">
+        <Services>
+            <asp:ServiceReference Path="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2" />
+        </Services>
+        </asp:ScriptManager> 
+        <div id="head_img" style="background-image: url('Images/header.jpg'); width: 100%; height: 108px;">
+           
+
+
+        </div>
+
+
+
+        <div class="page">
+            <div id="header">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="AdminDefault.aspx">home</a>
+                        </li>
+                        <li>
+                            <a href="AdminViewReg.aspx">new registrations</a>
+                        </li>
+                        <li>
+                            <a href="AdminAddKrOffcr.aspx">add krishi officer</a>
+                        </li>
+                        <li>
+                            <a href="AdminAddEvent.aspx">add event</a>
+                        </li>
+                        <li>
+                            <a href="AdminAddCDetails.aspx">add Details</a>
+                        </li>
+                        <li>
+                            <a href="AdminAddStore.aspx">add to store</a>
+                        </li>
+                        <%--<li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default2.aspx">Logout</asp:HyperLink>
+                        </li>--%>
+                        
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />      
+            </div>
+            
+        </div>
+        <div class="footer" style="border: thin groove #00FFFF;font-family:'Times New Roman'; background-image: url('Images/40848.jpg');text-align:center; height: 49px;margin-top:60px">
+          
+            <asp:HyperLink ID="HyperLink1" runat="server" BackColor="#6699FF" Target="_blank" BorderColor="#990000" BorderStyle="Ridge" BorderWidth="2px" Font-Bold="True" Font-Size="Medium" ForeColor="White" NavigateUrl="~/action2012.pdf" Width="300px">One Year Report</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" BackColor="#6699FF" BorderColor="#990000" BorderStyle="Ridge" BorderWidth="2px" Font-Bold="True" Font-Size="Medium" ForeColor="White" NavigateUrl="~/AdminAbout.aspx" Width="300px">About</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink3" runat="server" BackColor="#6699FF" BorderColor="#990000" BorderStyle="Ridge" BorderWidth="2px" Font-Bold="True" Font-Size="Medium" ForeColor="White"  Width="300px">Help & Support</asp:HyperLink>
+
+
+        </div>  
+    </form>
+</body>
+</html>
